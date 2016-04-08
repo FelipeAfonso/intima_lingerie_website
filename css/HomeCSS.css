@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+    height: 100%;
+}
+
+body {
+   margin:0px;	
+   text-align: center;
+   background-color: #FFFFFF;
+   height: 100%;
+}
+
+#MainMenuRow{
+	width: 70%;
+
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+
+	text-align: left;
+	
+	background:#F9F9F9;
+	z-index:1;	
+}
+
+#Header{
+	position:relative;
+	
+	min-height:150px;
+   	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:5px;
+    height:auto;
+}
+#imgLogo{
+	float:left;
+}
+
+#MenuContent{
+	margin:auto;
+	height:inherit;
+}
+#ContentTable{
+	position:absolute;
+	top:50%;
+	left:50%;
+	
+	margin: -20px 0 0 -170px;
+}
+
+#ButtonSearch{
+	height:auto;
+	display:inline-block;
+	background-color:#FE13AD;
+	border:none;
+	color:#FFF;
+	text-align:center;
+	font-size:28px;
+	padding-left:10px;
+	padding-right:20px;
+	width:200px;
+	transition:all 0.5s;
+	cursor:pointer;
+	margin:-7px;
+}
+
+#ButtonSearch span{
+	cursor:pointer;
+	display:inline-block;
+	position:relative;
+	transition:0.5s;
+}
+
+#ButtonSearch span:after{
+	content:'>>';
+	position:absolute;
+	opacity:0;
+	top:2px;
+	right:-20;
+	transition:0.5s;
+}
+#ButtonSearch:hover span{
+	padding-right:40px;	
+}
+#ButtonSearch:hover span:after{
+	opacity:1;
+	right:0;	
+}
+
+#BrowserInput{
+	width:250px;
+	height:25px;
+	
+	padding:3px;
+	padding-left:30px;
+	box-sizing:content-box;
+	border-radius:5px;
+	border: 2px solid #FE13AD;
+	
+	background-repeat:no-repeat;
+	background-position: 2px, 10px;
+	background-image:url('SearchIcon.png');
+}
+
+#BrowserInput:focus{
+	border:2px solid #9AFD00;
+}
+
+#MenuCategoryRow{
+	width: 70%;
+	min-height:30px;
+	
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1px;
+
+	text-align: left;
+	
+	background:#F9F9F9;
+}
+
+.menuRow{
+    border: 2px solid #FE13AD;
+	border-radius: 10px;
+}
+
+.CategoryTable{
+	border:none;
+	border-collapse:collapse;
+	
+	text-align:center;
+	
+	margin:auto;
+	width:100%;
+}
+.CategoryTable td{
+	border-left:2px solid #FE13AD;
+	border-right:2px solid #FE13AD;
+}
+.CategoryTable td:first-child{
+	border-left:none;
+}
+.CategoryTable td:last-child{
+	border-right:none;
+}
+	
+.CategorySpan{
+	font-size:26px;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color:#FE13AD;
+}
+
