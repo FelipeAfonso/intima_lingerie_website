@@ -109,32 +109,24 @@ body {
 	border:2px solid #9AFD00;
 }
 
-#MenuCategoryRow{
-	width: 70%;
-	min-height:30px;
-	
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:1px;
-
-	text-align: left;
-	
-	background:#F9F9F9;
-}
 
 .menuRow{
     border: 2px solid #FE13AD;
 	border-radius: 10px;
+	background:#F9F9F9;
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1px;
+	min-height:30px;
 }
 
 .CategoryTable{
 	border:none;
-	border-collapse:collapse;
-	
 	text-align:center;
-	
-	margin:auto;
+	margin:center;
 	width:100%;
+	table-layout:fixed;
 }
 .CategoryTable td{
 	border-left:2px solid #FE13AD;
@@ -152,4 +144,16 @@ body {
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	color:#FE13AD;
 }
-
+.DefaultSpan{
+	font-size: 18px;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color:#FE13AD;
+}
+.DefaultSubSpan{
+	font-size: 16px;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color:#FE13AD;
+}
+.CleanA{
+	text-decoration:none;
+}
