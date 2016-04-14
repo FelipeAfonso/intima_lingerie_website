@@ -5,7 +5,8 @@
 	<title>Intima Lingerie</title>
     <link href="css/HomeCSS.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<script src="js/register.js"></script>
+<body onLoad="addFieldsToSelect()">
 	<div id="MainMenuRow" class="menuRow">
     	<div id="Header">
         	<div id="imgLogo">
@@ -39,12 +40,63 @@
 	     </tbody>
 		</table>
     </div>
+    
     <div id="Content" class="menuRow">
-    	<span class="CategorySpan"> Política de Vendas</span>
-    	<p align="left" style="margin-left:15px"><span class="DefaultSubSpan" style="color:#000"><p><b><span class="DefaultSubSpan" style="color:#000">1 - Prazo de entrega </b></p><div style="margin-left:15px;"><span class="DefaultSubSpan" style="color:#000"><p>O prazo para entrega do seu pedido pode variar de acordo com a localidade e a opção de frete escolhida. As opções de entrega são:</p><p>a. Entrega Expressa - O prazo para receber a encomenda é de 5 a 11 dias úteis.</p><p>b. Entrega Normal - O prazo de entrega varia de 08 a 30 dias úteis.</p><p>Seu pedido será liberado para faturamento após confirmação de dados pelo Posthaus.com, e assim que recebermos a aprovação do cartão de crédito ou a confirmação de pagamento do banco.</p><p>O prazo para a entrega come&ccedil;a a contar a partir da data da confirma&ccedil;&atilde;o do pagamento.</p><p>Para facilitar, você será informado por e-mail de cada etapa do seu pedido e assim que ele for enviado você também receberá um aviso. Você ainda pode acompanhar o andamento através do link <a href="https://www.posthaus.com.br/pedido/cliente?acao=historicopd&navegue=meusPedidos" style="text-decoration: underline;color: #393939;">Meus Pedidos</a>.</p></div><br><span class="DefaultSubSpan" style="color:#000"><p><b>2 - Condições de Entrega</b></p><div style="margin-left:15px;"><p>Nossas entregas são feitas de segunda à sexta-feira, das 8h às 18h, exceto em dias de feriados locais e nacionais. </p><p>O serviço de entregas é realizado pelos Correios ou por Transportadora contratada pelo Posthaus.com.</p><p>Não é possível agendar data e horário para entrega e é necessário ter uma pessoa no endereço informado para que o pedido possa ser recebido.</p><p>Não realizamos entregas em endereço diferente do definido pelo cliente no ato do fechamento do pedido, como vizinhos, por exemplo.</p><p>Estão autorizadas a receber as mercadorias: porteiros, recepcionistas, secretárias, familiares, desde que assinem o protocolo de entrega e apresentem documento de identificação.</p><p>Também, por medidas de segurança, não fornecemos o nome da transportadora que fará a entrega.</p></div><br><span class="DefaultSubSpan" style="color:#000"><p><b>3 - Despesas de Entrega</b></p><div style="margin-left:15px;"><a name="frete"></a><p>O frete será calculado de acordo com o local e a modalidade de entrega escolhida, e o cálculo será feito no fechamento do seu pedido, após a sua escolha da modalidade.</p><p>Será <b>GRÁTIS</b> para pedidos acima de R$ 199,99, enviados na modalidade Entrega Normal, mas somente para regiões Sul e Sudeste, salvo nas condições de frete único e outras promoções específicas de frete anunciadas no banner da página inicial do site ou por e-mail. Consulte sempre esta informação.</p><br><p>*Esta condição pode variar conforme nossas promoções. (Fique atento ao banner da página inicial)</p><b>Nota:</b><p>Os Correios estabeleceram novas diretrizes que poderão implicar no aumento do prazo e alteração da forma de entrega dos pedidos em determinadas localidades.</p><p>Dessa forma, visando atender e satisfazer a nossos clientes da melhor forma possível, solicitamos a gentileza de inserir o CEP no campo indicado da sacola de compras para consultar as condições de entrega na sua região. Agradecemos sua compreensão.</p></span>
-        </p>
-</div>
-</div>
+		<p><b><span class="DefaultSpan" style="font-size:24px"> Registro de Novo Usuário </span></b></p>
+        <form name="register_form" action="" method="post">
+        	<table border="0" width="60%" style="margin:auto; text-align:left" >
+        	<tr>
+            	<td><span class="DefaultSubSpan"> Nome Completo: </span></td>
+				<td><input type="text" maxlength="50" value="" name="TxtNome" id="TxtNome" class="InputForm" required></td>
+			</tr><tr>
+            	<td><span class="DefaultSubSpan"> CPF: </span></td>
+				<td><input type="text" maxlength="11" placeholder="Apenas números" pattern="[0-9]+$" name="TxtCpf" id="TxtCpf" class="InputForm" required></td>
+			</tr><tr>
+            <td><span class="DefaultSubSpan"> Nascimento: </span></td>
+                <td><select name="Dianasc" id="Dianasc" class="SelectForm" style="width:20%" required> 
+                		<option selected>Dia</option>
+                	</select>
+                    <select name="Mesnasc" id="Mesnasc" class="SelectForm" style="width:30%" required> 
+                    	<option selected>Mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                	</select>
+                    <select name="Anonasc" id="Anonasc" class="SelectForm" style="width:30%" required> 
+                    	<option selected>Ano</option>
+                	</select>
+                </td>
+			</tr><tr>
+	            <td><span class="DefaultSubSpan"> Email: </span></td>
+				<td><input type="email" maxlength="40" value="" name="TxtEmail" id="TxtEmail" class="InputForm" required></td>
+                </tr><tr>
+                	<td valign="top"><span class="DefaultSubSpan"> Gênero: </span></td>
+                    <td><input type="radio" name="s" id="s" value="O" checked><span class="DefaultSubSpan"> Outros<br>
+                    <input type="radio" name="s" id="s" value="F"><span class="DefaultSubSpan"> Feminino<br>
+                    <input type="radio" name="s" id="s" value="M"><span class="DefaultSubSpan"> Masculino<br>
+					</td>
+                </tr><tr>
+                	<td colspan="2" align="center">
+                    	<input type="submit" value="Enviar" name="BtnEnviar">
+						<input type="reset" value="Limpar" name="BtnLimpar">
+						<input type="button" value="Alert" name="BtnLimpar" onclick="alert('Hello World!')">
+						<input type="button" value="Valida&ccedil;&atilde;o" name="BtnValidacao" onclick="Validacao()">
+					</td>
+                 </tr>
+        	</table>
+        </form>
+    </div>
+    
+    
     <div id="Footer" style="margin-bottom:20px" class="menuRow">
     	<table border="0px" class="CategoryTable">
         	<tr>
